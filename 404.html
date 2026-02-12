@@ -7,13 +7,13 @@
       // Store the URL path for retrieval by index.html
       var pathSegments = location.pathname.split('/').slice(1);
       
-      // Remove empty segments and 'App' repository name
-      pathSegments = pathSegments.filter(function(seg) { return seg.length > 0 && seg !== 'App'; });
+      // Remove empty segments and 'app' repository name
+      pathSegments = pathSegments.filter(function(seg) { return seg.length > 0 && seg !== 'app'; });
       
-      sessionStorage.redirect = '/' + 'App' + '/#/' + pathSegments.join('/') + location.search;
+      sessionStorage.redirect = '/' + 'app' + '/#/' + pathSegments.join('/') + location.search;
       
       // Redirect to the SPA
-      location.replace(location.protocol + '//' + location.host + '/App' + location.search);
+      location.replace(location.protocol + '//' + location.host + '/app' + location.search);
     </script>
   </head>
   <body>
